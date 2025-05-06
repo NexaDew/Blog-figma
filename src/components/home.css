@@ -8,7 +8,7 @@
     justify-content: flex-start;
     padding: 0 250px;
     height: 100vh;
-    background-image: url('C:\Users\aksha\OneDrive\Desktop\nexadew\src\Assets\earth.png'); 
+    background-image: url('../Assets/earth.png'); 
     background-size: 1510px 730px;
     background-position: center;
     background-repeat: no-repeat;
@@ -139,7 +139,7 @@
     width: 100%;
     max-width: 1460px;
     height: 720px;
-    background-image: url('C:\Users\aksha\OneDrive\Desktop\nexadew\src\Assets\third.png'); /* Replace with your actual image path */
+    background-image: url('../Assets/third.png'); /* Replace with your actual image path */
     background-size: cover;
     background-position: center;
     border-radius: 12px;
