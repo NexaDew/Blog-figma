@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+
 import "./home.css";
 import image1 from "../Assets/image1.png";
 import image2 from "../Assets/image2.png";
@@ -9,18 +9,13 @@ import image5 from "../Assets/image5.png";
 import image6 from "../Assets/image6.png";
 import HomeSection from "../components/homeSection";
 import blogData from "../components/blogData";
+import Navbar from "./Header"; // ✅ Import Navbar
 
 function Home() {
   return (
     <div className="home-container">
       <section className="hero">
-        <header className="navbar">
-          <nav>
-            <Link to="/work">Work</Link>
-            <Link to="/about">About</Link>
-            <Link to="/blog">Blog</Link>
-          </nav>
-        </header>
+        <Navbar /> 
         <div className="text-content">
           <p className="name">Linus Kigai</p>
           <h1>Bringing<br />Concept to Life</h1>

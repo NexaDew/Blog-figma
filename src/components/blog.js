@@ -1,29 +1,20 @@
-import React from "react";
+import React, { useState } from "react";
 import "./blog.css";
 import blogblog from "../Assets/blogblog.png";
-import BlogCard from "../components/BlogCard"; 
+import BlogCard from "../components/BlogCard";
 import blogData from "../components/blogData";
-
+import CategoryTabs from "./CatagoryTabs";
+import Navbar from "./Header";
+import Footer from "./Footer";
 function Blog() {
+  const [activeTab, setActiveTab] = useState("Latest Blog");
+
   return (
     <div className="blog-container">
-      {/* Navigation */}
-      <nav className="header-nav">
-        <a href="/blog">Blog</a>
-        <a href="/about">About</a>
-        <a href="/contact">Contact</a>
-      </nav>
-      <div className="hiii"></div>
+      <Navbar />
 
       {/* Category Tabs */}
-      <div className="category-tabs">
-        <span className="tab-active">Latest Blog</span>
-        <span className="tab">Urban Planning</span>
-        <span className="tab">Graphics Design</span>
-        <span className="tab">Web Design</span>
-        <span className="tab">UX/UI Design</span>
-        <span className="tab">Technology</span>
-      </div>
+      <CategoryTabs activeTab={activeTab} onTabChange={setActiveTab} />
 
       {/* Main Blog Section */}
       <div className="blog-main">
@@ -43,7 +34,7 @@ function Blog() {
         </div>
       </div>
 
-      {/* Show only the last 6 blogs */}
+      {/* Recent Blog Cards */}
       <div className="article-section">
         <h2 className="article-title">Recent Posts</h2>
         <div className="article-grid">
@@ -59,14 +50,8 @@ function Blog() {
       </div>
 
       {/* Footer */}
-      <div className="last-con">
-        <h3 className="hei">daily blog</h3>
-        <p className="last">
-          Lörem ipsum patt kar i renyst robotfälla. Tregyktig sana, nuktigt i mandatpingis tes.
-          <br />Analigt anede. Arat lagen. Lörem ipsum patt kar i renyst robotfälla. Tregyktig sana,
-          <br />nuktigt i mandatpingis tes. Analigt anede.
-        </p>
-      </div>
+      <Footer/>
+      
     </div>
   );
 }
