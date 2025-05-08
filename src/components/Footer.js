@@ -2,16 +2,17 @@
 import React from "react";
 import "./blog.css";
 
-function Footer() {
+function Footer({ title, description }) {
   return (
     <div className="last-con">
-      <h3 className="hei">daily blog</h3>
+      <h3 className="hei">{title}</h3>
       <p className="last">
-        Lörem ipsum patt kar i renyst robotfälla. Tregyktig sana, nuktigt i mandatpingis tes.
-        <br />
-        Analigt anede. Arat lagen. Lörem ipsum patt kar i renyst robotfälla. Tregyktig sana,
-        <br />
-        nuktigt i mandatpingis tes. Analigt anede.
+        {description.split("\n").map((line, index) => (
+          <React.Fragment key={index}>
+            {line}
+            <br />
+          </React.Fragment>
+        ))}
       </p>
     </div>
   );

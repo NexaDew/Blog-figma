@@ -107,9 +107,6 @@ body, html, .home-container {
   color: #a0f0e0;
 }
 
-
-
-
 .iconspics{
   padding: 20px;
   align-items: center;
@@ -122,24 +119,18 @@ body, html, .home-container {
   height: 50px;
 }
 
-
-
-
-
-.urban-container {
+.image-section-container {
   width: 100%;
   height: 100vh;
-  
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.urban-hero {
+.image-section-hero {
   width: 100%;
   max-width: 1460px;
   height: 720px;
-  background-image: url('../Assets/third.png'); /* Replace with your actual image path */
   background-size: cover;
   background-position: center;
   border-radius: 12px;
@@ -147,86 +138,14 @@ body, html, .home-container {
   overflow: hidden;
 }
 
-.urban-text {
+.image-section-text {
   position: absolute;
-  bottom: 20px;
   left: 20px;
   color: white;
   font-size: 1.5rem;
   font-weight: bold;
   font-family: sans-serif;
 }
-
-
-.arts-container {
-  width: 100%;
-  height: 100vh;
-  
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.arts-hero {
-  width: 100%;
-  max-width: 1460px;
-  height: 720px;
-  background-image: url('../Assets/reg5.png');
-  background-size: cover;
-  background-position: center;
-  border-radius: 12px;
-  position: relative;
-  overflow: hidden;
-}
-
-.arts-text{
-  position: absolute;
-  bottom: 40px;
-  left: 20px;
-  color: white;
-  font-size: 1.5rem;
-  font-weight: bold;
-  font-family: sans-serif;
-}
-
-
-
-
-
-.graphics-container {
-  width: 100%;
-  height: 100vh;
-  
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.graphics-hero {
-  width: 100%;
-  max-width: 1460px;
-  height: 720px;
-  background-image: url('../Assets/rec4.png');
-  background-size: cover;
-  background-position: center;
-  border-radius: 12px;
-  position: relative;
-  overflow: hidden;
-}
-
-.graphics-text{
-  position: absolute;
-  bottom: 20px;
-  left: 20px;
-  color: white;
-  font-size: 1.5rem;
-  font-weight: bold;
-  font-family: sans-serif;
-}
-
-
-
-
 
 .blog-section {
   background-color: #0f1f1e;

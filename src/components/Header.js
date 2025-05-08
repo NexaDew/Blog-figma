@@ -1,18 +1,20 @@
-// src/components/Navbar.js
+// src/components/Header.js
 import React from "react";
 import { Link } from "react-router-dom";
 import "./home.css";
 
-function Navbar() {
+function Header({ links }) {
   return (
     <header className="navbar">
       <nav>
-        <Link to="/work">Work</Link>
-        <Link to="/about">About</Link>
-        <Link to="/blog">Blog</Link>
+        {links.map((linkObj, index) => (
+          <Link key={index} to={linkObj.path}>
+            {linkObj.name}
+          </Link>
+        ))}
       </nav>
     </header>
   );
 }
 
-export default Navbar;
+export default Header;

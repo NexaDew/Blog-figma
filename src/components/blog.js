@@ -4,14 +4,28 @@ import blogblog from "../Assets/blogblog.png";
 import BlogCard from "../components/BlogCard";
 import blogData from "../components/blogData";
 import CategoryTabs from "./CatagoryTabs";
-import Navbar from "./Header";
+import Header from "../components/Header";
 import Footer from "./Footer";
+
+const footerContent = {
+  title: "daily blog",
+  description: `Lörem ipsum patt kar i renyst robotfälla. Tregyktig sana, nuktigt i mandatpingis tes.
+Analigt anede. Arat lagen. Lörem ipsum patt kar i renyst robotfälla. Tregyktig sana,
+nuktigt i mandatpingis tes. Analigt anede.`
+};
+
+const navLinks = [
+  { name: "Blog", path: "/blog" },
+  { name: "About", path: "/about" },
+  { name: "Contact", path: "/Contact" },
+  
+];
 function Blog() {
   const [activeTab, setActiveTab] = useState("Latest Blog");
 
   return (
     <div className="blog-container">
-      <Navbar />
+      <Header links={navLinks} />
 
       {/* Category Tabs */}
       <CategoryTabs activeTab={activeTab} onTabChange={setActiveTab} />
@@ -50,7 +64,8 @@ function Blog() {
       </div>
 
       {/* Footer */}
-      <Footer/>
+      
+      <Footer title={footerContent.title} description={footerContent.description} />
       
     </div>
   );
