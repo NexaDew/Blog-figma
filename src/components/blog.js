@@ -1,59 +1,17 @@
 import React from "react";
-import './blog.css';
+import "./blog.css";
 import blogblog from "../Assets/blogblog.png";
-import blogblog1 from "../Assets/blogblog1.png";
-import blogblog2 from "../Assets/blogblog2.png";
-import blogblog3 from "../Assets/blogblog3.png";
-import blogblog4 from "../Assets/blogblog4.png";
-import blogblog5 from "../Assets/blogblog5.png";
-import blogblog6 from "../Assets/blogblog6.png";
-
-
-
-
-const blogDataa = [
-  {
-    image: blogblog1,
-    title: 'Lörem ipsum patt kar i renyst',
-    description: 'Lörem ipsum patt kar i renyst robotfälla. Tregyktig sana, nuktigt i mandatpingis tes. Analigt anede. Arat lagen',
-  },
-  {
-    image: blogblog2,
-    title: 'Lörem ipsum patt kar i renyst',
-    description: 'Lörem ipsum patt kar i renyst robotfälla. Tregyktig sana, nuktigt i mandatpingis tes. Analigt anede. Arat lagen',
-  },
-  {
-    image: blogblog3,
-    title: 'Lörem ipsum patt kar i renyst',
-    description: 'Lörem ipsum patt kar i renyst robotfälla. Tregyktig sana, nuktigt i mandatpingis tes. Analigt anede. Arat lagen',
-  },
-  {
-    image: blogblog4,
-    title: 'Lörem ipsum patt kar i renyst',
-    description: 'Lörem ipsum patt kar i renyst robotfälla. Tregyktig sana, nuktigt i mandatpingis tes. Analigt anede. Arat lagen',
-  },
-  {
-    image: blogblog5,
-    title: 'Lörem ipsum patt kar i renyst',
-    description: 'Lörem ipsum patt kar i renyst robotfälla. Tregyktig sana, nuktigt i mandatpingis tes. Analigt anede. Arat lagen',
-  },
-  {
-    image: blogblog6,
-    title: 'Lörem ipsum patt kar i renyst',
-    description: 'Lörem ipsum patt kar i renyst robotfälla. Tregyktig sana, nuktigt i mandatpingis tes. Analigt anede. Arat lagen',
-  },
-  
-];
-
+import BlogCard from "../components/BlogCard"; 
+import blogData from "../components/blogData";
 
 function Blog() {
   return (
     <div className="blog-container">
       {/* Navigation */}
       <nav className="header-nav">
-        <a href="Blog">Blog</a>
-        <a href="About">About</a>
-        <a href="Contact">Contact</a>
+        <a href="/blog">Blog</a>
+        <a href="/about">About</a>
+        <a href="/contact">Contact</a>
       </nav>
       <div className="hiii"></div>
 
@@ -70,11 +28,7 @@ function Blog() {
       {/* Main Blog Section */}
       <div className="blog-main">
         <div className="blog-image-wrapper">
-          <img
-            src={blogblog}
-            alt="City"
-            className="blog-image"
-          />
+          <img src={blogblog} alt="City" className="blog-image" />
           <div className="blog-overlay">
             <p className="overlay-category">Urban Planning</p>
             <h2 className="overlay-title">
@@ -89,30 +43,30 @@ function Blog() {
         </div>
       </div>
 
-      
+      {/* Show only the last 6 blogs */}
       <div className="article-section">
-  <h2 className="article-title">Recent Posts</h2>
-  <div className="article-grid">
-    {blogDataa.map((blog, index) => (
-      <div className="article-card" key={index}>
-        <img src={blog.image} alt="Blog" className="article-image" />
-        <div className="article-content">
-          <h3 className="article-heading">{blog.title}</h3>
-          <p className="article-text">{blog.description}</p>
-          <button className="article-button">Read More</button>
+        <h2 className="article-title">Recent Posts</h2>
+        <div className="article-grid">
+          {blogData.slice(3).map((blog, index) => (
+            <BlogCard
+              key={index}
+              image={blog.image}
+              title={blog.title}
+              description={blog.description}
+            />
+          ))}
         </div>
       </div>
-    ))}
-  </div>
-</div>
 
-<div className="last-con">
-    <h3 className="hei">daily blog</h3>
-    <p className="last">Lörem ipsum patt kar i renyst robotfälla. Tregyktig  sana, nuktigt i mandatpingis tes.<br></br>Analigt anede. Arat lagen.Lörem ipsum patt kar i renyst robotfälla. Tregyktig  sana,<br></br> nuktigt i mandatpingis tes. Analigt anede. </p>
-
-</div>
-
-
+      {/* Footer */}
+      <div className="last-con">
+        <h3 className="hei">daily blog</h3>
+        <p className="last">
+          Lörem ipsum patt kar i renyst robotfälla. Tregyktig sana, nuktigt i mandatpingis tes.
+          <br />Analigt anede. Arat lagen. Lörem ipsum patt kar i renyst robotfälla. Tregyktig sana,
+          <br />nuktigt i mandatpingis tes. Analigt anede.
+        </p>
+      </div>
     </div>
   );
 }
