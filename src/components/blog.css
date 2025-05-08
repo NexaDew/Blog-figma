@@ -1,0 +1,147 @@
+/* Reset and base styles */
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #111;
+    color: #ffffff;
+  }
+  
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  /* Top Navigation Bar */
+  .header-nav {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 2rem;
+    padding: 1rem 2rem;
+    border-bottom: 1px solid #2a2a2a;
+  }
+  
+  .header-nav a {
+    color: white;
+    font-size: 1rem;
+    font-weight: 500;
+  }
+  
+  .header-nav a:hover {
+    text-decoration: underline;
+  }
+  
+  
+  
+  /* Category Tabs */
+  .category-tabs {
+    display: flex;
+    gap: 4rem;
+    padding: 4rem 2rem;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .tab {
+    padding: 10px 16px;
+    margin-right: 8px;
+    cursor: pointer;
+    color: #777;
+    border-bottom: 2px solid transparent;
+  }
+  
+  .tab-active {
+    padding: 10px 16px;
+    margin-right: 8px;
+    cursor: pointer;
+    color: #1a842a;
+    font-weight: bold;
+    border-bottom: 2px solid #26c245;
+  }
+  
+  
+  .tab:hover {
+    background-color: #333;
+  }
+  
+  /* Blog Main */
+  .blog-main {
+    padding: 2rem;
+  }
+  
+  .blog-image-wrapper {
+    position: relative;
+    border-radius: 20px;
+    overflow: hidden;
+    max-width: 100%;
+  }
+  
+  .blog-image {
+    width: 75%;
+    height: auto;
+    display: block;
+  }
+  
+  /* Overlay on the image */
+  .blog-overlay {
+    position: absolute;
+    right: 5rem;
+    bottom: 6rem;
+    
+    background-color: rgba(45, 165, 95, 0.9);
+    padding: 2rem;
+    border-radius: 20px;
+    max-width: 400px;
+    color: white;
+  }
+  
+  .overlay-category {
+    font-size: 1.1rem;
+    color: #d1f8db;
+    margin-bottom: 0.5rem;
+  }
+  
+  .overlay-title {
+    font-size: 1.3rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    color: white;
+  }
+  
+  .overlay-desc {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: #f1f1f1;
+    margin-bottom: 1.5rem;
+  }
+  
+  .overlay-button {
+    background-color: #f0f0f0;
+    color: #222;
+    border: none;
+    padding: 0.5rem 1.5rem;
+    border-radius: 999px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .overlay-button:hover {
+    background-color: #e0e0e0;
+  }
+  
+
+  
+.last-con{
+    text-align: center;
+    padding: 20px;
+}   
+
+.hei{
+    font-size: 24px;
+}
+
+.last{
+    font-size: 18px;
+  
+}
