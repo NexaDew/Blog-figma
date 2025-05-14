@@ -57,4 +57,31 @@
     gap: 20px;
     padding: 20px;
   }
+
   
+  @media (max-width: 600px) {
+  .article-grid {
+    grid-template-columns: 1fr;
+    padding: 12px;
+  }
+
+  .article-image {
+    height: 220px;
+    width: 100%;
+    padding: 12px;
+  }
+
+  .article-heading {
+    font-size: 1rem;
+  }
+
+  .article-text {
+    font-size: 0.85rem;
+  }
+
+  .article-button {
+    font-size: 0.9rem;
+    padding: 6px 12px;
+  }
+}
+
